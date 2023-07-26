@@ -16,8 +16,9 @@ function App() {
 
   const navbarStyle = {
     backgroundColor: '#007bff',
-    color: '#fff',
+    color: '#fffg',
     padding: '10px',
+    textColor: '#fffg'
   };
 
   const handleNavClick = (page) => {
