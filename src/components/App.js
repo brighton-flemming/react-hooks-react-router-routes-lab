@@ -9,14 +9,18 @@ import Movies from "./Movies";
 
 
 function App() {
-  
-}
+
+
   return (
   <div>
     <NavBar/>
+    <Home />
+    <Movies />
+    <Actors />
+    <Directors />
 
     </div>
     )
+  }
 
-
-export default App;
+export default App
