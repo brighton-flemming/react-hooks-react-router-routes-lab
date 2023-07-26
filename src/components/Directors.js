@@ -3,9 +3,9 @@ import { directors } from "../data";
 
 function Directors() {
   return (
-  <div>
-    <h1>Director's Page</h1>
-    {directors.map((director, index) => (
+    <div>
+      <h1>Director's Page</h1>
+      {directors.map((director, index) => (
         <div key={index}>
           <h2>{director.name}</h2>
           <ul>
@@ -13,15 +13,10 @@ function Directors() {
               <li key={movieIndex}>{movie}</li>
             ))}
           </ul>
-          </div>
-    ))}
-          
-
-
-
-
-  </div>
-  )
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default Directors;
