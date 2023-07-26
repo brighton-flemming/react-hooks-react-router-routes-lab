@@ -10,12 +10,12 @@ function App() {
 
   const [activePage, setActivePage] = useState("home")
 
-  const handleClick = (page) => {
+  const handleNavClick = (page) => {
     setActivePage(page)
   }
   return (
     <div>
-    <NavBar activePage={activePage} handleClick={handleClick}/>
+    <NavBar activePage={activePage} handleNavClick={handleNavClick}/>
       <Switch>
         <Route path="/movies" component={Movies} />
         <Route path="/directors" component={Directors} />

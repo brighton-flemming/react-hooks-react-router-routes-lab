@@ -2,24 +2,24 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 
-function NavBar({activePage, handleClick}) {
+function NavBar() {
   return (
     <div>
       <nav>
         <ul>
           <li>
-            <NavLink exact to="/" onClick={() => handleClick("home")} className={activePage === "home" ? "active" : ""}>
+            <NavLink exact to="/" >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/movies" onClick={() => handleClick("movies")} className={activePage === "movies" ? "active" : ""}>Movies</NavLink>
+            <NavLink to="/movies" >Movies</NavLink>
           </li>
           <li>
-            <NavLink to="/directors" onClick={() => handleClick("directors")} className={activePage === "directors" ? "active" : ""}>Directors</NavLink>
+            <NavLink to="/directors">Directors</NavLink>
           </li>
           <li>
-            <NavLink to="/actors" onClick={() => handleClick("actors")} className={activePage === "actors" ? "active" : ""}>Actors </NavLink>
+            <NavLink to="/actors">Actors </NavLink>
           </li>
         </ul>
       </nav>
