@@ -10,18 +10,30 @@ function App() {
 
   const [activePage, setActivePage] = useState("home")
 
+  const containerStyle = {
+    marginTop: '20px',
+  };
+
+  const navbarStyle = {
+    backgroundColor: '#007bff',
+    color: '#fff',
+    padding: '10px',
+  };
+
   const handleNavClick = (page) => {
     setActivePage(page)
   }
   return (
-    <div>
+    <div style={navbarStyle} className="container mt-3">
     <NavBar activePage={activePage} handleNavClick={handleNavClick}/>
+    <div style={containerStyle}>
       <Switch>
         <Route path="/movies" component={Movies} />
         <Route path="/directors" component={Directors} />
         <Route path="/actors" component={Actors} />
         <Route path="/" component={Home} />
       </Switch>
+      </div>
       </div>
   );
 }
