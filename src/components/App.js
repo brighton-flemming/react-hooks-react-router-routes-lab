@@ -6,21 +6,17 @@ import Actors from "./Actors";
 import Directors from "./Directors";
 import Movies from "./Movies";
 
-
-
 function App() {
-
-
   return (
-  <div>
-    <NavBar/>
-    <Home />
-    <Movies />
-    <Actors />
-    <Directors />
+    <NavBar>
+      <Switch>
+        <Route path="/movies" component={Movies} />
+        <Route path="/directors" component={Directors} />
+        <Route path="/actors" component={Actors} />
+        <Route path="/" component={Home} />
+      </Switch>
+    </NavBar>
+  );
+}
 
-    </div>
-    )
-  }
-
-export default App
+export default App;
