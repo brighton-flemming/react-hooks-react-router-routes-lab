@@ -1,40 +1,30 @@
 import React from "react";
-import { NavLink, Switch, Route} from "react-router-dom";
-import Movies from "./Movies";
-import Home from "./Home";
-import Actors from "./Actors";
-import Directors from "./Directors";
+import { NavLink } from "react-router-dom";
 
-function NavBar() {
+
+function NavBar({activePage, handleClick}) {
   return (
     <div>
-  <nav>
-  <ul>
-    <li>
-      <NavLink exact to="/">Home</NavLink>
-    </li>
-    <li>
-      <NavLink to="/movies">Movies</NavLink>
-    </li>
-    <li>
-      <NavLink to="/directors">Directors</NavLink>
-    </li>
-    <li>
-      <NavLink to="/actors">Actors </NavLink>
-    </li>
-  </ul>
- </nav>
-
-<Switch>
-<Route path="/movies" component={Movies} />
-<Route path="/directors" component={Directors} />
-<Route path="/actors" component={Actors} />
-<Route path="/" component={Home} />
-
-</Switch>
-</div>
-
-  )
+      <nav>
+        <ul>
+          <li>
+            <NavLink exact to="/" onClick={() => handleClick("home")} className={activePage === "home" ? "active" : ""}>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/movies" onClick={() => handleClick("movies")} className={activePage === "movies" ? "active" : ""}>Movies</NavLink>
+          </li>
+          <li>
+            <NavLink to="/directors" onClick={() => handleClick("directors")} className={activePage === "directors" ? "active" : ""}>Directors</NavLink>
+          </li>
+          <li>
+            <NavLink to="/actors" onClick={() => handleClick("actors")} className={activePage === "actors" ? "active" : ""}>Actors </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 }
 
-export default NavBar
+export default NavBar;
