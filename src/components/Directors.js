@@ -4,7 +4,7 @@ import { directors } from "../data";
 function Directors() {
   return (
     <div>
-      <h1>Director's Page</h1>
+      <h1>Directors Page</h1> 
       {directors.map((director, index) => (
         <div key={index}>
           <h2>{director.name}</h2>
